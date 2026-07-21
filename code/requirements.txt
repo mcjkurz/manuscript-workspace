@@ -1,5 +1,26 @@
-# Python dependencies for the optional code/ environment.
-# Edit to match your project's needs. Install with:
+# Python dependencies for the code/ environment.
+# Install with:
 #   venv/bin/pip install -r requirements.txt
+#
+# System requirements (not pip-installable; see README.md):
+#   - quarto      (Markdown -> DOCX)
+#   - xelatex / latexmk / biber  (LaTeX -> PDF, default engine: xelatex)
 
+# --- core numerics / plotting ---
+numpy
+matplotlib
+scikit-learn
+joblib
+
+# --- streaming / IO ---
+ijson
+tqdm
+
+# --- XML / MediaWiki parsing ---
 lxml
+mwparserfromhell
+
+# --- Chinese text processing ---
+jieba
+opencc-python-reimplemented
+qhchina
