@@ -1,8 +1,9 @@
 # manuscript-workspace
 
-A compact workspace for researching, drafting, and rendering one academic
-article or monograph chapter with an AI coding agent. Clone, rename, and
-start writing.
+A workspace for source-based research, drafting, and rendering a manuscript
+(article, chapter, or monograph) with an AI coding agent. Primary sources are
+kept under `sources/` and cited directly; the agent does not invent sources,
+quotations, or bibliographic details.
 
 > **Rename the folder** when you start a new project, and update the H1
 > above to match.
@@ -26,13 +27,19 @@ Then:
    files.
 3. **Install system prerequisites** (Quarto for DOCX; a TeX distribution
    with `latexmk` and `biber` for PDF). See Prerequisites below.
-4. **Edit the canonical manuscript** (`manuscript/manuscript.md` by default)
+4. **Add sources.** Place primary and secondary material under
+   `sources/original/` as PDF, DOCX, EPUB, TXT, or other formats. The agent
+   converts each to a plain-text derivative under `sources/processed/` when
+   first needed and searches the derivatives instead of re-parsing the
+   originals; quotations and page references are verified against the
+   original before citation.
+5. **Edit the canonical manuscript** (`manuscript/manuscript.md` by default)
    and `bibliography/references.bib`.
-5. **Optionally drop style models** (articles, chapters, prior writing)
+6. **Optionally drop style models** (articles, chapters, prior writing)
    into `style/` so the agent can match their voice and rhythm.
-6. **Render:** `manuscript/render_docx.sh` (Markdown) or
+7. **Render:** `manuscript/render_docx.sh` (Markdown) or
    `manuscript/render_pdf.sh` (LaTeX). Output lands in `manuscript/output/`.
-7. **Track issues** in `STATUS.md` and drop informal notes in `notes/`.
+8. **Track issues** in `STATUS.md` and drop informal notes in `notes/`.
 
 ## Prerequisites
 
