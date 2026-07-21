@@ -9,10 +9,23 @@ start writing.
 
 ## Quick start
 
-1. **Clone and rename.** `git clone <url> my-article && cd my-article`
+```sh
+# 1. Clone the repo and rename the folder for your project.
+git clone https://github.com/mcjkurz/manuscript-workspace.git my-article && cd my-article
+
+# 2. Install Python deps for the code/ environment.
+python3 -m venv code/venv
+code/venv/bin/pip install -r code/requirements.txt
+```
+
+Then:
+
+1. **Rename the project.** Update the H1 at the top of this README to match
+   your new folder name.
 2. **Pick a manuscript format** (see below) and delete the other path's
    files.
-3. **Install prerequisites** (see below).
+3. **Install system prerequisites** (Quarto for DOCX; a TeX distribution
+   with `latexmk` and `biber` for PDF). See Prerequisites below.
 4. **Edit the canonical manuscript** (`manuscript/manuscript.md` by default)
    and `bibliography/references.bib`.
 5. **Render:** `manuscript/render_docx.sh` (Markdown) or
