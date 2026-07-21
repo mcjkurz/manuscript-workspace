@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Quarto / pandoc build artifacts
+/.quarto/
+**/*.quarto_ipynb
+
+# Generated manuscript output (disposable; source remains canonical)
+manuscript/output/
+manuscript/rendering/build/
+manuscript/rendering/article.docx
+manuscript/rendering/reference.docx
+
+# Per-session manuscript backups are kept under manuscript/backups/ and
+# tracked in git. Uncomment the following line if you prefer not to track
+# them.
+# manuscript/backups/

@@ -1,0 +1,34 @@
+% Canonical manuscript (LaTeX path).
+% Edit this file directly. The agent copies it to manuscript/backups/ at the
+% start of each session. Render with manuscript/render_pdf.sh.
+% If you prefer Markdown, use manuscript/manuscript.md instead and delete
+% this file (see README.md).
+%
+% Adjust the class, font, language, and bibliography style to your target
+% journal or press. The defaults below are a plain article-class setup with
+% biblatex (author-date).
+
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, citestyle=authoryear-comp]{biblatex}
+
+\addbibresource{../bibliography/references.bib}
+
+\title{Title}
+\author{Author}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+First paragraph.
+
+\printbibliography
+\end{document}

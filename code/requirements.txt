@@ -1,0 +1,5 @@
+# Python dependencies for the optional code/ environment.
+# Edit to match your project's needs. Install with:
+#   venv/bin/pip install -r requirements.txt
+
+lxml

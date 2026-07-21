@@ -1,0 +1,19 @@
+---
+format:
+  docx:
+    toc: false
+    reference-doc: reference.docx
+bibliography: ../../bibliography/references.bib
+# Replace apa.csl with the CSL for your target journal or press
+# (https://github.com/citation-style-language/styles).
+csl: apa.csl
+cite-method: citeproc
+suppress-bibliography: true
+lang: en-US
+resource-path:
+  - ..
+execute:
+  enabled: false
+---
+
+{{< include ../manuscript.md >}}
