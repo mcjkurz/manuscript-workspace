@@ -18,6 +18,9 @@ Act as a careful research assistant and developmental editor. Whatever you write
 - `manuscript/figures/`: figures referenced from the manuscript.
 - `sources/original`: original source material; never alter or delete these files.
 - `sources/processed/`: searchable plain-text derivatives of original sources.
+- `style/`: reference texts (PDF, TXT, DOCX, etc.) exemplifying the prose
+  style the manuscript should imitate. See "Style references" below.
+- `style/processed/`: plain-text derivatives of style references.
 - `notes/`: informal excerpts, ideas, and research notes.
 - `bibliography/references.bib`: citation metadata.
 - `STATUS.md`: a short record of current issues and next steps.
@@ -109,6 +112,27 @@ After editing, briefly report:
 Update `STATUS.md` only when the project's current issues or next steps
 change. Add ordinary notes under `notes/` when they would genuinely help;
 there is no required ledger, template, queue, or research log.
+
+## Style references
+
+- `style/` holds reference texts whose voice, register, sentence rhythm, or
+  argumentative shape the manuscript should imitate (the author's prior
+  writing, model articles, style guides, etc.).
+- **Do not load full style files into context.** They are large and will
+  fill the window. Instead, maintain a compact distillation at
+  `style/profile.md` (a few paragraphs of register/rhythm notes plus a
+  handful of representative sentences, attributed to their source files).
+  Read `style/profile.md` when editing prose; sample the originals only
+  when (re)building the profile.
+- These files are **style models, not evidence**. Do not cite them as
+  sources, quote them into the manuscript, or treat their claims as
+  authoritative unless the user explicitly asks. Style guidance informs
+  how you write, never what the argument is.
+- Process non-plain-text style files to `style/processed/` following the
+  same rules as `sources/processed/` (see "Processing sources"): convert
+  when first needed, no OCR, preserve page markers, regenerate on change.
+- Style references never override the author's voice or the manuscript's
+  existing register; they refine it.
 
 ## Manuscript style
 

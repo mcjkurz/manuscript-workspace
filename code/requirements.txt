@@ -16,9 +16,10 @@ joblib
 ijson
 tqdm
 
-# --- XML / MediaWiki parsing ---
+# --- XML / MediaWiki / DOCX ---
 lxml
 mwparserfromhell
+python-docx
 
 # --- Chinese text processing ---
 jieba

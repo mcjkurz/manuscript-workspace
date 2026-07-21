@@ -28,9 +28,11 @@ Then:
    with `latexmk` and `biber` for PDF). See Prerequisites below.
 4. **Edit the canonical manuscript** (`manuscript/manuscript.md` by default)
    and `bibliography/references.bib`.
-5. **Render:** `manuscript/render_docx.sh` (Markdown) or
+5. **Optionally drop style models** (articles, chapters, prior writing)
+   into `style/` so the agent can match their voice and rhythm.
+6. **Render:** `manuscript/render_docx.sh` (Markdown) or
    `manuscript/render_pdf.sh` (LaTeX). Output lands in `manuscript/output/`.
-6. **Track issues** in `STATUS.md` and drop informal notes in `notes/`.
+7. **Track issues** in `STATUS.md` and drop informal notes in `notes/`.
 
 ## Prerequisites
 
@@ -61,6 +63,8 @@ Then:
 | `manuscript/backups/` | per-session timestamped snapshots (see below) |
 | `sources/original/` | original research material; never edit |
 | `sources/processed/` | plain-text derivatives for searching |
+| `style/` | reference texts exemplifying the target prose style |
+| `style/processed/` | plain-text derivatives of style references |
 | `notes/` | informal notes and excerpts |
 | `bibliography/references.bib` | citation metadata |
 | `code/` | optional scripts, data, experiments (delete if unused) |
