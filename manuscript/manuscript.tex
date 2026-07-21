@@ -10,8 +10,16 @@
 
 \documentclass[11pt]{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage{iftex} % engine detection: \ifxetex, \ifluatex
+\ifxetex
+  \usepackage{fontspec}      % native UTF-8 / system fonts (CJK-capable)
+\else\ifluatex
+  \usepackage{fontspec}
+\fi\fi
+\ifPDFlatex
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
 \usepackage[english]{babel}
 \usepackage{microtype}
 \usepackage{csquotes}

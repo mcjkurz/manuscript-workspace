@@ -28,7 +28,11 @@ start writing.
   code/venv/bin/pip install -r code/requirements.txt
   ```
 - **LaTeX path (PDF):** a TeX distribution (MacTeX / TeX Live) with
-  `latexmk` and `biber`.
+  `latexmk` and `biber`. The default engine is **xelatex** (native UTF-8
+  and CJK font support). Override with `TEX_ENGINE=luatex` or
+  `TEX_ENGINE=pdflatex` when invoking `manuscript/render_pdf.sh`; the
+  `manuscript.tex` preamble detects the engine and loads `fontspec` under
+  xelatex/luatex, falling back to `inputenc`/`fontenc` under pdflatex.
 
 ## Structure
 
@@ -70,7 +74,8 @@ the right one.
 
 ```sh
 manuscript/render_docx.sh   # Markdown → DOCX
-manuscript/render_pdf.sh    # LaTeX    → PDF
+manuscript/render_pdf.sh    # LaTeX    → PDF (default engine: xelatex)
+TEX_ENGINE=pdflatex manuscript/render_pdf.sh   # override the engine
 ```
 
 The generated document is disposable; the source manuscript remains
